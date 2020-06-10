@@ -1,8 +1,17 @@
 /* ナビ */
-.nav{
-  
+.nav li{
+  display: inline-block;
 }
 /* copylight */
 .footer-text-center{
    text-align: center;
+}
+
+body{
+  font-size: 16px;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  margin: 0 auto;
+  /*真ん中に合わせることができる！スマホでもパソコンでも対応できるように*/
 }
