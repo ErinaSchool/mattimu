@@ -2,6 +2,11 @@
 .nav li{
   display: inline-block;
 }
+
+.login{
+  text-align: right;
+}
+
 /* copylight */
 .footer-text-center{
    text-align: center;
