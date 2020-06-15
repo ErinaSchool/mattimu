@@ -1,22 +1,77 @@
-/* ナビ */
-.nav li{
+.styleBySide a{
   display: inline-block;
+  vertical-align: top;
+}
+.login li{
+  list-style-type: none;
+  float: right;
+}
+.login li a{
+  text-decoration: none;
+  color: #4169E1;
+}
+/* ナビ */
+.nav {
+  list-style: none;
+  overflow: hidden;
+}
+.nav li{
+  width: 140px;
+  text-align: center;
+  float: left;
+  background-color: #fff;
+  /* ボタンの高さ */
+  line-height: 50px;
+  /* 境目 */
+  margin-right: 10px;
+}
+.nav li a{
+	text-decoration:none;		/*リンク部分を下線無しにする*/
+  color: #4169E1;
+  /* クリックできる領域 */
+  padding: 5px;
+}
+/* ボタンのデザイン */
+.btn {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: #67c5ff;
+  border: solid 2px #67c5ff;
+  border-radius: 3px;
+  transition: .4s;
+  width: 130px;
+  height: 50px;
 }
 
-.login{
-  text-align: right;
+.btn:active {
+  /*押したとき*/
+  background: #67c5ff;
+  color: white;
 }
 
-/* copylight */
-.footer-text-center{
-   text-align: center;
+body h1{
+  color: #4169E1;
+  overflow:hidden
 }
-
 body{
+  padding:0px;         /* ページ全体のpadding */
+  text-align:center;   /* 下記のautoに未対応用のセンタリング */
+  margin-left:auto;    /* 左側マージンを自動的に空ける */
+  margin-right:auto;   /* 右側マージンを自動的に空ける */
+  text-align:left;     /* 中身を左側表示に戻す */
+  width:900px;         /* 幅を決定する */
+
   font-size: 16px;
   margin: 0px;
   padding: 0px;
   font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
   margin: 0 auto;
   /*真ん中に合わせることができる！スマホでもパソコンでも対応できるように*/
+}
+/* copylight */
+.footer-text-center{
+  text-align: center;
 }
