@@ -1,3 +1,6 @@
+* {
+	margin:0; padding:0; 		/*全要素のマージン・パディングをリセット*/
+}
 .styleBySide a{
   display: inline-block;
   vertical-align: top;
@@ -7,69 +10,73 @@
   float: right;
 }
 .login li a{
+  font-weight: bold;
+  padding: 0.25em 0;
   text-decoration: none;
-  color: #4169E1;
+  color: #6495ED;
 }
 /* ナビ */
-.nav {
-  list-style: none;
-  overflow: hidden;
-}
 .nav li{
-  width: 140px;
+  width:150px; height:50px; 	/*メインメニュー部分の幅と高さ*/
+	margin:0px 30px; 		/*上下マージン0px、左右マージン20px*/
   text-align: center;
-  float: left;
-  background-color: #fff;
-  /* ボタンの高さ */
-  line-height: 50px;
-  /* 境目 */
-  margin-right: 10px;
+  line-height: 30px;
+  display: inline-block;
 }
 .nav li a{
-	text-decoration:none;		/*リンク部分を下線無しにする*/
-  color: #4169E1;
-  /* クリックできる領域 */
-  padding: 5px;
+  padding: 6px;
 }
 /* ボタンのデザイン */
 .btn {
-  display: inline-block;
   position: relative;
+  font-weight: bold;
+  padding: 0.25em 0;
   text-decoration: none;
-  padding: 0.3em 1em;
-  text-decoration: none;
-  color: #67c5ff;
-  border: solid 2px #67c5ff;
-  border-radius: 3px;
-  transition: .4s;
-  width: 130px;
-  height: 50px;
+  color: #6495ED;
+  display: block;
 }
 
-.btn:active {
-  /*押したとき*/
-  background: #67c5ff;
-  color: white;
+.btn:before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 4px;
+  top:100%;
+  left: 0;
+  border-radius: 3px;
+  background:#6495ED;
+  transition: .2s;
+}
+.btn:hover:before{
+  top: -webkit-calc(100% - 3px);
+  top: calc(100% - 3px);
+}
+.tos {
+  list-style-type: none;
 }
 
 body h1{
   color: #4169E1;
-  overflow:hidden
+  overflow:hidden;
 }
 body{
+  background-color: #F0FFF0;
   padding:0px;         /* ページ全体のpadding */
   text-align:center;   /* 下記のautoに未対応用のセンタリング */
   margin-left:auto;    /* 左側マージンを自動的に空ける */
   margin-right:auto;   /* 右側マージンを自動的に空ける */
   text-align:left;     /* 中身を左側表示に戻す */
   width:900px;         /* 幅を決定する */
-
   font-size: 16px;
   margin: 0px;
   padding: 0px;
   font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
   margin: 0 auto;
   /*真ん中に合わせることができる！スマホでもパソコンでも対応できるように*/
+}
+div#pagebody {
+	background-color:#ffffff;		/*内容全体の背景色*/
+  width:1000px; margin:0 auto;	/*内容全体をセンタリング*/
 }
 /* copylight */
 .footer-text-center{
