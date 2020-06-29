@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div>
+        <h3>Login</h3>
+        <form method="POST" action="/login">
+            <div>
+                <input type="email" name="email" placeholder="Your Email" autofocus="">
+            </div>
+            <div>
+                <input type="password" name="password" placeholder="Your Password">
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox">
+                    Remember me
+                </label>
+            </div>
+            <button>Login</button>
+        </form>
+        <li><a href="{{ url_for('auth.signup') }}">新規登録</a></li>
+    </div>
+{% endblock %}
