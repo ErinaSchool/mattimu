@@ -10,7 +10,7 @@ app = Flask(__name__)
  
 # ここから /// データベースの設定
 app.secret_key = "super secret key"
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///qa-site.splite3'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///mattimu-site.splite3'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 # ここまで /// データベースの設定
  
@@ -36,11 +36,10 @@ from app.views.auth import auth
  
 # authに関するルートをflaskアプリであるappに追加
 app.register_blueprint(auth)
- 
+app.register_blueprint(mypages, url_prefix='/mypages')
  
 # indexのルート設定
 @app.route('/')
 @login_required  # ここを追加
 def index():
     return render_template('index.html')
-

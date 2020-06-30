@@ -14,7 +14,7 @@ class User(UserMixin, db.Model):
     password = db.Column(db.String(100))
 
     #追加
-    questions = relationship('Question')
+    mypages = relationship('Mypage')
 
     # モデルからインスタンスを生成するときに使います。(利便性を高めるため)
     # passwordの暗号化も自動で行うことができるので、安全性も高めることができます。

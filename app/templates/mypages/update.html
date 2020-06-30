@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div>
+        <h1>マイページの編集</h1>
+        <div>
+            <form action="/mypages/update/{{ mypage.id }}" method="POST">
+                <div>
+                    <div>
+                        <input type="text" name="user_name" placeholder="ユーザ名" value="{{ mypage.user_name }}">
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <input type="text" name="friend_code" placeholder="フレンドコード" value="{{ mypage.friend_code }}">
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <input type="text" name="profile" placeholder="プロフィール" value="{{ mypage.profile }}">
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <input type="text" name="before_comment" placeholder="対戦前コメント" value="{{ mypage.before_comment }}">
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <input type="text" name="after_comment" placeholder="対戦後コメント" value="{{ mypage.after_comment }}">
+                    </div>
+                </div>
+                <button>修正する</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}l

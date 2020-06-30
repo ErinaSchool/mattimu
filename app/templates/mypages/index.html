@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1>マイページ</h1>
+    <!-- <ul>
+        <li><a href="{{ url_for('mypages.find_all') }}">Index</a></li>
+        <li><a href="{{ url_for('mypages.add') }}">追加</a></li>
+    </ul> -->
+        {% for mypage in mypages %}
+    <ul>
+        <li>ユーザ名：{{ mypage.user_name }}</li>
+        <p>フレンドコード：{{ mypage.friend_code }}</p>
+        <p>プロフィール：{{ mypage.profile }}</p>
+        <p>対戦前のコメント：{{ mypage.before_comment }}</p>
+        <p>対戦後のコメント：{{ mypage.after_comment }}</p>
+    </ul>
+    <!-- <ul>
+        <li><a href="{{ url_for('mypages.add') }}">プロフィールを新しく作る</a></li>
+    </ul> -->
+            <span><button><a href="{{ url_for('mypages.update', mypage_id=mypage.id) }}">プロフィールを編集する</a></button></span>
+        <!-- <form action="{{ url_for('mypages.delete', mypage_id=mypage.id) }}" method="POST">
+            <button type="submit"><a>プロフィールを消す</a></button>
+        </form> -->
+{% endfor %}
+
+{% endblock %}

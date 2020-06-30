@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 # ここから /// データベースの設定
 app.secret_key = "super secret key"
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///qa-site.sqlite3'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///mattimu-site.sqlite3'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 # ここまで /// データベースの設定
 
@@ -24,7 +24,7 @@ login_manager.init_app(app)
 
 # データベースのimport
 from app.models.user import User
-
+from app.models.mypage import Mypage
 
 @login_manager.user_loader
 def load_user(user_id):
@@ -35,12 +35,12 @@ from app.views.auth import auth
 
 # authに関するルートをflaskアプリであるappに追加
 app.register_blueprint(auth)
-from app.views.questions import questions
+from app.views.mypages import mypages
 
 app.register_blueprint(auth)
 # url_prefixに「/questions」を入れると
 # http://localhost:5000/questions/ というリンクになりわかりやすくなるので設定を追加しました
-app.register_blueprint(questions, url_prefix='/questions')
+app.register_blueprint(mypages, url_prefix='/mypages')
 
 
 # indexのルート設定

@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div>
+        <h3>プロフィールの新規作成</h3>
+        <div>
+            <form action="/mypages/add" method="POST">
+                <div>
+                    <div>
+                        <input type="text" name="user_name" placeholder="ユーザ名" autofocus="">
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <input type="text" name="friend_code" placeholder="フレンドコード" autofocus="">
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <input type="text" name="profile" placeholder="プロフィール" autofocus="">
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <input type="text" name="before_comment" placeholder="対戦前コメント" autofocus="">
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <input type="text" name="after_comment" placeholder="対戦後コメント" autofocus="">
+                    </div>
+                </div>
+                <button>追加する</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}l

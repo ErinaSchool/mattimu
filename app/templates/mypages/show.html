@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+ 
+{% block content %}
+    <h1>マイページ</h1>
+    <ul>
+        <li><a href="{{ url_for('mypages.find_all') }}">Index</a></li>
+        <li><a href="{{ url_for('mypages.add') }}">追加</a></li>
+    </ul>
+    <ul>
+        <p>ユーザ名：{{ mypage.user_name }}</p>
+        <p>フレンドコード：{{ mypage.friend_code }}</p>
+        <p>プロフィール：{{ mypage.profile }}</p>
+        <p>対戦前コメント：{{ mypage.before_comment }}</p>
+        <p>対戦後コメント：{{ mypage.after_comment }}</p>
+    </ul>
+{% endblock %}
