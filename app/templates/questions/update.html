@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div>
+        <h1>マイページの編集</h1>
+        <div>
+            <form action="/questions/update/{{ question.id }}" method="POST">
+                <div>
+                    <div>
+                        <input type="text" name="title" placeholder="Title" value="{{ question.title }}">
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <input type="text" name="body" placeholder="Body" value="{{ question.body }}">
+                    </div>
+                </div>
+                <button>修正する</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}l

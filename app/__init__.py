@@ -35,6 +35,12 @@ from app.views.auth import auth
 
 # authに関するルートをflaskアプリであるappに追加
 app.register_blueprint(auth)
+from app.views.questions import questions
+
+app.register_blueprint(auth)
+# url_prefixに「/questions」を入れると
+# http://localhost:5000/questions/ というリンクになりわかりやすくなるので設定を追加しました
+app.register_blueprint(questions, url_prefix='/questions')
 
 
 # indexのルート設定
@@ -42,9 +48,9 @@ app.register_blueprint(auth)
 def index():
     return render_template('index.html')
 
-@app.route('/mypage.html')
-def mypage():
-    return render_template('mypage.html')
+@app.route('/mypageshow.html')
+def mypageshow():
+    return render_template('mypage/mypageshow.html')
 
 @app.route('/free.html')
 def free():
@@ -53,3 +59,7 @@ def free():
 @app.route('/rate.html')
 def rate():
     return render_template('rate.html')
+
+@app.route('/mypageupdate.html')
+def mypageupdate():
+    return render_template('mypage/mypageupdate.html')
