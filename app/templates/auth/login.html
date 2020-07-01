@@ -1,23 +1,21 @@
 {% extends "layout.html" %}
 
 {% block content %}
-    <div>
-        <h3>Login</h3>
+        <h1>ログイン</h1>
+    <div id = "form">
         <form method="POST" action="/login">
-            <div>
-                <input type="email" name="email" placeholder="Your Email" autofocus="">
-            </div>
-            <div>
-                <input type="password" name="password" placeholder="Your Password">
-            </div>
-            <div>
-                <label>
+            <p>メールアドレス</p>
+                <label class ="ef"><input type="email" name="email" placeholder="" autofocus=""></label>
+                <p>パスワード</p>
+                <label class ="ef"><input type="password" name="password" placeholder=""></label>
+                <p class = "check"><label>
                     <input type="checkbox">
-                    Remember me
+                    このコンピュータに記憶する
                 </label>
-            </div>
-            <button>Login</button>
+                </p>
+            <p class="submit"><button>ログイン</button></p>
         </form>
-        <li><a href="{{ url_for('auth.signup') }}">新規登録</a></li>
+    </div>
+        <a href="{{ url_for('auth.signup') }}">新規登録する</a>
     </div>
 {% endblock %}
